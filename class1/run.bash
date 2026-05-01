@@ -1,0 +1,2 @@
+#!/bin/bash
+g++ -std=c++11 -O2 -Wall -Wextra -DLOCAL $1.cpp -o ./out/$1 && ./out/$1 < ./in/$1.in
