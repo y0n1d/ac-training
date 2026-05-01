@@ -1,4 +1,4 @@
-// Author: AepZ
+// Author: Yoned
 
 #include <iostream>
 #include <vector>
@@ -36,10 +36,18 @@ const int N = 2e5 + 10;
 int n, m;
 int a[N];
 
-
-
 void solve() {
-    
+    int n;
+    cin >> n;
+    vector<int> r(n), c(n);
+    for (int &x : r) cin >> x;
+    for (int &x : c) cin >> x;
+    for (int i = 0; i < n; ++i) {
+        for (int j = 0; j < n; ++j) {
+            cout << min(r[i], c[j]) - 1 << (j == n - 1 ? "" : " ");
+        }
+        cout << '\n';
+    }
 }
 
 int main() {
@@ -47,7 +55,7 @@ int main() {
     cin.tie(nullptr); 
 
     int t = 1;
-    // cin >> t;
+    cin >> t;
     while (t--) {
         solve();
     }
