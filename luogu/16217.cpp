@@ -33,31 +33,21 @@ const int MOD = 1e9 + 7;
 
 const int N = 2e5 + 10;
 
-int n, m;
-int a[N];
-
-
+int n, a, d, m, k;
 
 void solve() {
-    string a = "ECUST";
-    int n = 5;
-    int b;
-    int j;
-    int qwe;
-    cin >> qwe;
+    cin >> n >> a >> d >> m >> k;
 
-    for (int i = 0; i < (1 << n); ++i) {
-        for ( j = n - 1; j >= 0; --j) {
-            b = ((i >> j) & 1); 
-            cout << (char)(a[n-j-1] + (b==1 ? 32 : 0));
-        }
-        cout << endl;
-    } 
+    if (d <= k) cout << 1 + m << endl;
+
 }
 
-int main() { 
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr); 
+
     int t = 1;
-    // cin >> t;
+    cin >> t;
     while (t--) {
         solve();
     }
